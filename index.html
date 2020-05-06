@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator - Js</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/calculator.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <header class="displayBox"></header>
+      <section class="keyboard">
+        <div class="row">
+          <button class="btnOperator" data-operation="empty">C</button>
+          <button class="btnOperator">&plusmn;</button>
+          <button class="btnOperator">&percnt;</button>
+          <button class="btnOperator" data-math="divide">&divide;</button>
+        </div>
+        <div class="row">
+          <button data-number="7">7</button>
+          <button data-number="8">8</button>
+          <button data-number="9">9</button>
+          <button class="btnOperator" data-math="multiply">&times;</button>
+        </div>
+        <div class="row">
+          <button data-number="4">4</button>
+          <button data-number="5">5</button>
+          <button data-number="6">6</button>
+          <button class="btnOperator" data-math="minus">&minus;</button>
+        </div>
+        <div class="row">
+          <button data-number="1">1</button>
+          <button data-number="2">2</button>
+          <button data-number="3">3</button>
+          <button class="btnOperator" data-math="add">&plus;</button>
+        </div>
+        <div class="row">
+          <button data-number="0">0</button>
+          <button data-number=".">&#8729;</button>
+          <button class="hidden" disabled></button>
+          <button class="btnOperator" data-operation="equals">&equals;</button>
+        </div>
+      </section>
+    </main>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
