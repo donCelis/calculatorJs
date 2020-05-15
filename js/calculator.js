@@ -2,9 +2,9 @@
 let displayBox = document.querySelector('.displayBox'),
   keyboard = document.querySelector('.keyboard'),
   status = false,
-  n1,
+  n1 = 0,
   typeOperation = ''
-
+  
 //Inicializar la calculadora en cero
 displayBox.textContent = 0
 
@@ -20,19 +20,19 @@ function calculator() {
         ds = t.dataset
     //que número estoy pulsando
     if (ds.number) {
-      console.log(ds.number)
+
       //Escribe en pantalla
       writeBox(ds.number)
     }
     //que operación estoy pulsando
     if (ds.math) {
-      console.log(ds.math)
+
       //Llama la operación
       getMath(t, ds.math)
     }
     //igualdad-limpiar
     if (ds.operation) {
-      console.log(ds.operation)
+      
       //Ejecuta la operación
       runMath(ds.operation)
     }
@@ -97,19 +97,20 @@ function runMath(operation) {
     if (result === Infinity) {
       displayBox.textContent = 'Error'
     }else{
-      let textResult = result.toString()
+      let textResult = result.toString() //toString() -> Convierte dato en cadena de texto
+
       if(textResult.includes('.') === true){
-        console.log('Encontrada')
+
         if (textResult.length <= 10 && textResult.length >= 0) {
           displayBox.textContent = textResult.slice(0,5)
         }else{
           displayBox.textContent = textResult.slice(0,10)
         }
       }else{
-        console.log('No encontrada')
+
         displayBox.textContent = textResult
       }
-      
+
     }
   }
   //Limpiar la pantalla
