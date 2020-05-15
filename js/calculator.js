@@ -36,6 +36,9 @@ function calculator() {
       //Ejecuta la operación
       runMath(ds.operation)
     }
+    if(ds.symbol){
+      displayBox.textContent = -(displayBox.textContent)
+    }
   })
 }
 
@@ -85,6 +88,9 @@ function runMath(operation) {
       case 'divide':
         result = n1 / n2
         break
+      case 'percnt':
+        result = (n1 / 100) * n2
+        break
       default:
         break
     }
@@ -109,6 +115,7 @@ function runMath(operation) {
   //Limpiar la pantalla
   if (operation === 'empty') {
     displayBox.textContent = '0'
+    result = 0
   } else {
     getResult(n1, typeOperation)
   }
