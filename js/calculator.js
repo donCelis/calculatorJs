@@ -3,7 +3,7 @@ let displayBox = document.querySelector('.displayBox'),
   keyboard = document.querySelector('.keyboard'),
   status = false,
   n1,
-  typeOperation
+  typeOperation = ''
 
 //Inicializar la calculadora en cero
 displayBox.textContent = 0
