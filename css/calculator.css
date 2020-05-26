@@ -1,17 +1,13 @@
-:root {
+:root{
   --colorMain: #19d4a2;
   --colorSecond: #212b41;
   --colorComp: #2e3951;
   --active: #95a8a0;
   --hover: white;
-  --gradient: linear-gradient(
-    45deg,
-    rgba(161, 209, 182, 1) 0%,
-    rgba(147, 225, 214, 1) 100%
-  );
+  --gradient: linear-gradient(45deg, rgba(161,209,182,1) 0%, rgba(147,225,214,1) 100%);
   --radius: 0.625rem;
 }
-* {
+*{
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,8 +15,8 @@
   box-sizing: border-box;
   vertical-align: baseline;
 }
-body {
-  font-family: "Rubik", sans-serif;
+body{
+  font-family: 'Rubik', sans-serif;
   background: var(--gradient);
   display: flex;
   flex-flow: column nowrap;
@@ -28,21 +24,22 @@ body {
   justify-content: center;
   height: 100vh;
 }
-.calculator {
+.calculator{
   width: 400px;
 }
-.displayBox {
+.displayBox{
+  overflow-wrap: break-word;
   font-weight: 300;
   background: var(--colorSecond);
   color: var(--colorMain);
   font-size: 3em;
   text-align: right;
-  padding: 1.25rem;
+  padding: 1.50rem 1.25rem;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
   letter-spacing: 0.2rem;
 }
-.keyboard {
+.keyboard{
   font-weight: 400;
   background: var(--colorComp);
   color: var(--active);
@@ -50,13 +47,13 @@ body {
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }
-.row {
+.row{
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
-.keyboard div button {
+.btn{
   background: transparent;
   color: var(--active);
   font-size: 1.5em;
@@ -70,19 +67,23 @@ body {
   border-radius: 100%;
   transition: all 0.2s ease-in-out;
 }
-.keyboard div button:hover {
+.btn:hover{
   border: 1px solid var(--hover);
   color: white;
 }
-.hidden {
+.hidden{
   visibility: hidden;
 }
-.btnOperator {
-  background: var(--colorSecond) !important;
-  color: var(--colorMain) !important;
+.btnOperator{
+  background: var(--colorSecond);
+  color: var(--colorMain);
 }
-.btnOperator:hover {
-  background: var(--colorMain) !important;
-  color: var(--colorSecond) !important;
-  border: 1px solid transparent !important;
+.btnOperator:hover{
+  background: var(--colorMain);
+  color: var(--colorSecond);
+  border: 1px solid transparent;
+}
+.equals{
+  flex-basis: 42%;
+  border-radius: 50px;
 }

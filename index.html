@@ -8,44 +8,45 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap"
     />
-    <link rel="stylesheet" href="css/calculator.min.css" />
+    <link rel="stylesheet" href="css/calculator.css" />
   </head>
   <body>
     <main class="calculator">
-      <header class="displayBox"></header>
+      <header class="displayBox">0</header>
       <section class="keyboard">
         <div class="row">
-          <button class="btnOperator" data-operation="empty">C</button>
-          <button class="btnOperator" data-symbol="plusmn">&plusmn;</button>
-          <button class="btnOperator" data-math="percnt">&percnt;</button>
-          <button class="btnOperator" data-math="divide">&divide;</button>
+          <button data-operation="empty" class="btn btnOperator">C</button>
+          <button data-symbol="plusmn" class="btn btnOperator">&plusmn;</button>
+          <button data-math="percnt" class="btn btnOperator">&percnt;</button>
+          <button data-math="divide" class="btn btnOperator">&divide;</button>
         </div>
         <div class="row">
-          <button data-number="7">7</button>
-          <button data-number="8">8</button>
-          <button data-number="9">9</button>
-          <button class="btnOperator" data-math="multiply">&times;</button>
+          <button data-number="7" class="btn">7</button>
+          <button data-number="8" class="btn">8</button>
+          <button data-number="9" class="btn">9</button>
+          <button data-math="multiply" class="btn btnOperator">&times;</button>
         </div>
         <div class="row">
-          <button data-number="4">4</button>
-          <button data-number="5">5</button>
-          <button data-number="6">6</button>
-          <button class="btnOperator" data-math="minus">&minus;</button>
+          <button data-number="4" class="btn">4</button>
+          <button data-number="5" class="btn">5</button>
+          <button data-number="6" class="btn">6</button>
+          <button data-math="minus" class="btn btnOperator">&minus;</button>
         </div>
         <div class="row">
-          <button data-number="1">1</button>
-          <button data-number="2">2</button>
-          <button data-number="3">3</button>
-          <button class="btnOperator" data-math="add">&plus;</button>
+          <button data-number="1" class="btn">1</button>
+          <button data-number="2" class="btn">2</button>
+          <button data-number="3" class="btn">3</button>
+          <button data-math="add" class="btn btnOperator">&plus;</button>
         </div>
         <div class="row">
-          <button data-number="0">0</button>
-          <button data-number=".">&#8729;</button>
-          <button class="hidden" disabled></button>
-          <button class="btnOperator" data-operation="equals">&equals;</button>
+          <button data-number="0" class="btn">0</button>
+          <button data-number="." class="btn">&#8729;</button>
+          <button data-operation="equals" class="btn btnOperator equals">
+            &equals;
+          </button>
         </div>
       </section>
     </main>
-    <script src="js/calculator.min.js"></script>
+    <script src="js/calculator.js"></script>
   </body>
 </html>
