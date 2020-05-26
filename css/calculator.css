@@ -6,6 +6,7 @@
   --hover: white;
   --gradient: linear-gradient(45deg, rgba(161,209,182,1) 0%, rgba(147,225,214,1) 100%);
   --radius: 0.625rem;
+  --font: 'Rubik', sans-serif;
 }
 *{
   margin: 0;
@@ -16,7 +17,6 @@
   vertical-align: baseline;
 }
 body{
-  font-family: 'Rubik', sans-serif;
   background: var(--gradient);
   display: flex;
   flex-flow: column nowrap;
@@ -28,6 +28,7 @@ body{
   width: 400px;
 }
 .displayBox{
+  font-family: var(--font);
   overflow-wrap: break-word;
   font-weight: 300;
   background: var(--colorSecond);
@@ -54,6 +55,7 @@ body{
   align-items: center;
 }
 .btn{
+  font-family: var(--font);
   background: transparent;
   color: var(--active);
   font-size: 1.5em;
