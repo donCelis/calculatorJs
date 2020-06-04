@@ -106,4 +106,29 @@
   }
 
   calculator()
+
+  //darkmode
+  let buttons = getClass('.darkMode'),
+    root = document.documentElement
+    //colorMain = getComputedStyle(root).getPropertyValue('--colorMain'),
+    //colorSecond = getComputedStyle(root).getPropertyValue('--colorSecond')
+
+  buttons.addEventListener('click', (e) => {
+    let element = e.target,
+        theme = ``
+    if (element.className.includes('dark')) {
+      theme = ``
+      //root.style.setProperty('--colorMain', 'red')
+    }else if(element.className.includes('light')) {
+      theme = `
+        --colorMain: white;
+        --colorSecond: #1abc9c;
+        --colorComp: var(--colorMain);
+        --active: #2c3e50;
+        --hover: #383e47;
+        --colorBorder: var(--colorSecond)
+      `
+    }
+    root.style.cssText = theme
+  })
 }(c = e => { console.log(e) }))
